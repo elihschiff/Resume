@@ -1,6 +1,6 @@
 # Resume - Eli Schiff
 
-My most up to date resume can be found at [Resume-Eli_Schiff.pdf](Resume-Eli-Schiff.pdf)
+My most up to date resume can be found at [Resume-Eli-Schiff.pdf](Resume-Eli-Schiff.pdf)
 
 
 To render a new pdf from the .tex file run
