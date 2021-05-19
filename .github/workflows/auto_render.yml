@@ -1,0 +1,22 @@
+name: Auto render resume
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+
+    - name: Run pdf render script
+      run: pdflatex Resume-Eli-Schiff.tex
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Auto rendered latest changes as pdf
