@@ -1,25 +1,25 @@
-name: Auto render resume
+# name: Auto render resume
 
-on:
-  push:
-    branches:
-      - "master"
+# on:
+#   push:
+#     branches:
+#       - "master"
 
-jobs:
-  render:
-    runs-on: ubuntu-latest
+# jobs:
+#   render:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: ${{ github.head_ref }}
-        
-    - name: Install dependencies
-      run: sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+#     steps:
+#     - uses: actions/checkout@v2
+#       with:
+#         ref: ${{ github.head_ref }}
 
-    - name: Run pdf render script
-      run: pdflatex Resume-Eli-Schiff.tex
+#     - name: Install dependencies
+#       run: sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: Auto rendered latest changes as pdf
+#     - name: Run pdf render script
+#       run: pdflatex Resume-Eli-Schiff.tex
+
+#     - uses: stefanzweifel/git-auto-commit-action@v4
+#       with:
+#         commit_message: Auto rendered latest changes as pdf
